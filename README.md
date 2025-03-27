@@ -25,6 +25,7 @@
 
 ## TO-DO
 We're currently in the process of cleaning up and organizing the code. 
+
 Thank you for your patience, everything will be up soon.
 - [ ] Train, Inference, and Evaluation code release.
 - [ ] Model release.
