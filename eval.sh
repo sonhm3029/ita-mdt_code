@@ -1,0 +1,9 @@
+CUDA_VISIBLE_DEVICES=0 python scr/eval.py \
+    --vitonhd_dataroot='DATA/zalando-hd-resized' \
+    --dresscode_dataroot='DATA/DressCode' \
+    --batch_size=16 \
+    --workers=8 \
+    --gen_folder='/path/to/ITA-MDT/results/ita-mdt_weights_ema_0.9999_2000000/VITON-HD/pair' \
+    --dataset="vitonhd" \
+    --test_order="paired" \
+    --category="upper_body" 
