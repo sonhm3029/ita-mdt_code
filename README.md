@@ -70,13 +70,15 @@ DATA/
   ├── DressCode/
 ```
 
-### 1. DensePose for DressCode
+### 1. Additional Images Required for DressCode
 
-To align the DensePose part-based color maps between VITON-HD and DressCode, we generated new DensePose annotations for the DressCode dataset using the [DensePose](https://github.com/facebookresearch/DensePose).  
+To generate the agnostic images and corresponding masks, we adopt the implementation from [CAT-DM](https://github.com/zengjianhao/CAT-DM). For DensePose, we utilize newly generated part-based color map images from [IDM-VTON](https://github.com/yisol/IDM-VTON) to ensure consistency with the VITON-HD dataset.
 
-The generated DensePose images can be downloaded from **[HERE](https://huggingface.co/datasets/jiwoohong93/dresscode_densepose)**, and follow the original DressCode dataset license.
+These images are required for proper training and generation.
+They can all be downloaded from **[HERE](https://huggingface.co/datasets/jiwoohong93/dresscode_add_more)** and are distributed under the same license as the original DressCode dataset.
 
-After downloading, move the `image-densepose` folder and its images for each garment category into the corresponding original DressCode dataset directories.
+After downloading, place each garment category’s folder and its images into the corresponding directory of the original DressCode dataset.
+
 
 ### 2. Pre-process SRE (Salient Region Extraction)
 
