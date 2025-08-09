@@ -80,6 +80,9 @@ After downloading, move the `image-densepose` folder and its images for each gar
 
 ### 2. Pre-process SRE (Salient Region Extraction)
 
+
+This code pre-processes SRE and saves salient region images in advance for faster and more efficient training and generation.
+
 Run the following command:
 
 ```bash
