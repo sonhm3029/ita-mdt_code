@@ -20,7 +20,7 @@
 </div>
 
 <p align="center">
-    <img src="images_github/ita-mdt.jpg" alt="ITA-MDT" width="700" height="auto">
+    <img src="images_github/teaser.png" alt="ITA-MDT" width="700" height="auto">
 </p>
 
 ---
