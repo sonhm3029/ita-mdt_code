@@ -202,7 +202,7 @@ For `generate_dc.sh`:
 
 ## Evaluation
 
-The evaluation code is adapted from [LaDI-VTON](https://github.com/miccunifi/ladi-vton). Please refer to the original repository for the setup required to run the evaluation.
+The evaluation code is adapted from [LaDI-VTON](https://github.com/miccunifi/ladi-vton). Please refer to the original repository for the environment required to run the evaluation.
 
 Run:  
 ```bash
