@@ -43,7 +43,7 @@ conda activate ITA-MDT
 
 The above commands will create and activate the conda environment with all core dependencies for ITA-MDT.
 
-**(optional)** We recommend utilizing [Adan](https://github.com/sail-sg/Adan) and [xFormers](https://github.com/facebookresearch/xformers) for improved training and inference efficiency.  
+**(optional)** We recommend utilizing [Adan](https://github.com/sail-sg/Adan) and [xFormers](https://github.com/facebookresearch/xformers) for improved training and generation efficiency.  
 
 ### Pre-trained Models Required
 Two pre-trained components are required and will be automatically downloaded on the first run of training or generation:
