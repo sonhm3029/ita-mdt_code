@@ -75,7 +75,7 @@ DATA/
 To generate the agnostic images and corresponding masks, we adopt the dataset preparation of [CAT-DM](https://github.com/zengjianhao/CAT-DM). For DensePose, we utilize new part-based color map DensePose images provided by [IDM-VTON](https://github.com/yisol/IDM-VTON) to ensure consistency with the VITON-HD dataset.
 
 These images are required for proper training and generation.
-They can all be downloaded from **[HERE](https://huggingface.co/datasets/jiwoohong93/dresscode_agnostic_and_densepose)** and are distributed under the same license as the original DressCode dataset.
+They can all be downloaded from **[HERE](https://huggingface.co/datasets/jiwoohong93/dresscode_agnostic_and_densepose)**.
 
 After downloading, place each garment category’s folder and its images into the corresponding directory of the original DressCode dataset.
 
@@ -93,6 +93,8 @@ python preprocess_salient_region_extraction.py --path_to_datasets ./DATA
 
 - `--path_to_datasets` should point to the folder containing `zalando-hd-resized` and `DressCode` directories.  
 - This script will process **both datasets** and save salient region images into the `cloth_sr` folder for each category.
+
+or, you can download the pre-processed salient region images from **[HERE](https://huggingface.co/datasets/jiwoohong93/ita-mdt_sre)**
 
 
 ### Expected Data Structure
