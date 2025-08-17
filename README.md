@@ -94,8 +94,9 @@ python preprocess_salient_region_extraction.py --path_to_datasets ./DATA
 - `--path_to_datasets` should point to the folder containing `zalando-hd-resized` and `DressCode` directories.  
 - This script will process **both datasets** and save salient region images into the `cloth_sr` folder for each category.
 
-or, you can download the pre-processed salient region images from **[HERE](https://huggingface.co/datasets/jiwoohong93/ita-mdt_sre)**
+or, you can download the pre-processed salient region images from **[HERE](https://huggingface.co/datasets/jiwoohong93/ita-mdt_sre)**.
 
+After downloading, place each garment category’s folder and its images into the corresponding directory.
 
 ### Expected Data Structure
 
