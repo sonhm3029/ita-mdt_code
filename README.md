@@ -174,6 +174,7 @@ bash train.sh
 
 You can download the checkpoint of our ITA-MDT from **[HERE](https://huggingface.co/jiwoohong93/ita-mdt_weights)**.
 
+[2025-10-08] Reuploaded with the correct model weights.
 
 #### **VITON-HD**
 Run:  
