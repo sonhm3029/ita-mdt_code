@@ -1,0 +1,4 @@
+vtonhd:
+ssim_score: 0.8818
+lpips_score: 0.0818
+fid_score: 7.6619

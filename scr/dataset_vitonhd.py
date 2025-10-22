@@ -140,7 +140,8 @@ class VITONHDDataset(Dataset):
                                     "image_densepose":"image", 
                                     "vit_cloth":"image",
                                     "vit_cloth_sr":"image",
-                                    }
+                                    },
+                is_check_shapes=False
         )
 
         #### non-spatial aug >>>>

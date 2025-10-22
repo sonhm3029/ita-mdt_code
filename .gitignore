@@ -1,0 +1,6 @@
+data/*
+DATA/*
+results/
+*.pyc
+pycache/*
+*.pt

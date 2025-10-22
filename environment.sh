@@ -10,7 +10,7 @@
 #   sudo apt-get install libopenmpi-dev
 
 ENV_NAME=ITA-MDT
-conda create -n $ENV_NAME python=3.8.19 -y
+conda create -n $ENV_NAME python=3.10 -y
 source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate $ENV_NAME
 

@@ -3,9 +3,9 @@ export CUDA_VISIBLE_DEVICES=0
 
 DATA_DIR=DATA
 OUTPUT_DIR=results
-MODEL_PATH=/path/to/ITA-MDT/experiments/ita-mdt_weights/ema_0.9999_2000000.pt
+MODEL_PATH=experiments/ita-mdt_weights/ema_0.9999_2000000.pt
 UNPAIR=false
-BATCH_SIZE=18
+BATCH_SIZE=8
 
 NUM_SAMPLING_STEPS=30
 CFG_SCALE=2.0

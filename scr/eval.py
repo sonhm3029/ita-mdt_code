@@ -120,27 +120,32 @@ def compute_metrics(gen_folder: str, test_order: str, dataset: str, category: st
     else:
         raise ValueError('Unsupported dataset')
 
+
     for m in metrics2compute:
-        assert m in ['all', 'ssim_score', 'lpips_score', 'fid_score'], 'Unsupported metric'
+        assert m in ['all', 'ssim_score', 'lpips_score', 'fid_score', 'kid_score'], 'Unsupported metric'
 
     if metrics2compute == ['all']:
-        metrics2compute = ['ssim_score', 'lpips_score', 'fid_score']
+        metrics2compute = ['ssim_score', 'lpips_score', 'fid_score', 'kid_score']
+
 
     if category == 'all':
         if "fid_score" in metrics2compute or "all" in metrics2compute:
             if not fid.test_stats_exists(f"{dataset}_all", mode='clean'):
                 make_custom_stats(dresscode_dataroot, vitonhd_dataroot)
-
-            fid_score = fid.compute_fid(gen_folder, dataset_name=f"{dataset}_all", mode='clean', dataset_split="custom",
-                                        verbose=True, use_dataparallel=False)
-
+            fid_score = fid.compute_fid(gen_folder, dataset_name=f"{dataset}_all", mode='clean', dataset_split="custom", verbose=True, use_dataparallel=False)
+        if "kid_score" in metrics2compute or "all" in metrics2compute:
+            if not fid.test_stats_exists(f"{dataset}_all", mode='clean'):
+                make_custom_stats(dresscode_dataroot, vitonhd_dataroot)
+            kid_score = fid.compute_kid(gen_folder, dataset_name=f"{dataset}_all", mode='clean', dataset_split="custom", verbose=True, use_dataparallel=False)
     else:
         if "fid_score" in metrics2compute or "all" in metrics2compute:
             if not fid.test_stats_exists(f"{dataset}_{category}", mode='clean'):
                 make_custom_stats(dresscode_dataroot, vitonhd_dataroot)
-
-            fid_score = fid.compute_fid(os.path.join(gen_folder, category), dataset_name=f"{dataset}_{category}",
-                                        mode='clean', verbose=True, dataset_split="custom", use_dataparallel=False)
+            fid_score = fid.compute_fid(os.path.join(gen_folder, category), dataset_name=f"{dataset}_{category}", mode='clean', verbose=True, dataset_split="custom", use_dataparallel=False)
+        if "kid_score" in metrics2compute or "all" in metrics2compute:
+            if not fid.test_stats_exists(f"{dataset}_{category}", mode='clean'):
+                make_custom_stats(dresscode_dataroot, vitonhd_dataroot)
+            kid_score = fid.compute_kid(os.path.join(gen_folder, category), dataset_name=f"{dataset}_{category}", mode='clean', verbose=True, dataset_split="custom", use_dataparallel=False)
             
     trans = transforms.Compose([
         transforms.Resize(generated_size),
